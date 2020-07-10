@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NestedScrollActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.touch.touchdemo.MyNestedScrollerView
+            android:id="@+id/mnsv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/ll_child"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tl"
+                        android:layout_width="match_parent"
+                        app:tabMode="scrollable"
+                        android:layout_height="40dp">
+
+                    </com.google.android.material.tabs.TabLayout>
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/vp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.viewpager.widget.ViewPager>
+                    <!--<TextView
+                        android:gravity="center"
+                        android:text="tabLayout"
+                        android:textColor="#fff"
+                        android:background="#338866"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_child"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.touch.touchdemo.MyNestedScrollerView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_top_bar"
+        android:orientation="horizontal"
+        android:background="#ff3687"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:text="我是topbar"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:orientation="vertical"
+        android:background="#00ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:text="我是content bar"
+            android:gravity="center"
+            android:textColor="#00ffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_go_top"
+        android:visibility="gone"
+        android:src="@drawable/icon_gotop"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#666666"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tv_child_rv_item"
+        android:text="childItem"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+    <View
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <!--<TextView
+        android:id="@+id/tv_load_more"
+        android:text="加载更多..."
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>-->
+
+</LinearLayout>
